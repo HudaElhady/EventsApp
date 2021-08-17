@@ -19,6 +19,8 @@
 		1EE3C22F26CB8DF50081BF49 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3C22E26CB8DF50081BF49 /* NetworkError.swift */; };
 		1EE3C23226CB8E3C0081BF49 /* ResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3C23126CB8E3C0081BF49 /* ResourceManager.swift */; };
 		1EE3C23426CB8FB70081BF49 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3C23326CB8FB70081BF49 /* NetworkConstants.swift */; };
+		1EE3C23726CB95A10081BF49 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3C23626CB95A10081BF49 /* EventType.swift */; };
+		1EE3C23926CB962E0081BF49 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3C23826CB962E0081BF49 /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		1EE3C22E26CB8DF50081BF49 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		1EE3C23126CB8E3C0081BF49 /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
 		1EE3C23326CB8FB70081BF49 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		1EE3C23626CB95A10081BF49 /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
+		1EE3C23826CB962E0081BF49 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		1EE3C1FA26CB8C600081BF49 /* EventsApp */ = {
 			isa = PBXGroup;
 			children = (
+				1EE3C23526CB939A0081BF49 /* Models */,
 				1EE3C22B26CB8D870081BF49 /* Network */,
 				1EE3C1FB26CB8C600081BF49 /* AppDelegate.swift */,
 				1EE3C1FD26CB8C600081BF49 /* SceneDelegate.swift */,
@@ -154,6 +159,15 @@
 				1EE3C23126CB8E3C0081BF49 /* ResourceManager.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		1EE3C23526CB939A0081BF49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1EE3C23626CB95A10081BF49 /* EventType.swift */,
+				1EE3C23826CB962E0081BF49 /* Event.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,11 +301,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EE3C23426CB8FB70081BF49 /* NetworkConstants.swift in Sources */,
+				1EE3C23926CB962E0081BF49 /* Event.swift in Sources */,
 				1EE3C22D26CB8DB80081BF49 /* ServerManager.swift in Sources */,
 				1EE3C23226CB8E3C0081BF49 /* ResourceManager.swift in Sources */,
 				1EE3C20026CB8C600081BF49 /* ViewController.swift in Sources */,
 				1EE3C1FC26CB8C600081BF49 /* AppDelegate.swift in Sources */,
 				1EE3C1FE26CB8C600081BF49 /* SceneDelegate.swift in Sources */,
+				1EE3C23726CB95A10081BF49 /* EventType.swift in Sources */,
 				1EE3C22F26CB8DF50081BF49 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
