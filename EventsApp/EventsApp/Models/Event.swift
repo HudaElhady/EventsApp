@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RootClass : Codable {
+struct Event : Codable {
 
     let cover : String?
     let descriptionField : String?
