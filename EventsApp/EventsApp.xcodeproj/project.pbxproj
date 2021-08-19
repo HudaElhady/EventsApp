@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E62079326CCFE35000323E1 /* StoryBoardsIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62079226CCFE35000323E1 /* StoryBoardsIDs.swift */; };
+		1E709D8D26CC068A005ED978 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E709D8C26CC068A005ED978 /* Endpoints.swift */; };
+		1E709D9326CC1704005ED978 /* EventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E709D9226CC1704005ED978 /* EventsPresenter.swift */; };
+		1E709D9526CC1809005ED978 /* EventsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E709D9426CC1809005ED978 /* EventsProtocols.swift */; };
+		1E709D9726CC1991005ED978 /* EventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E709D9626CC1991005ED978 /* EventsInteractor.swift */; };
+		1E709D9B26CC5E06005ED978 /* EventTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E709D9A26CC5E06005ED978 /* EventTypeView.swift */; };
+		1E709D9D26CC61F8005ED978 /* EventTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E709D9C26CC61F8005ED978 /* EventTypeCell.swift */; };
+		1E709D9F26CC62DB005ED978 /* EventTypeCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E709D9E26CC62DB005ED978 /* EventTypeCellConfigurator.swift */; };
+		1E709DA126CC6A9C005ED978 /* EventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E709DA026CC6A9C005ED978 /* EventsRouter.swift */; };
 		1EE3C1FC26CB8C600081BF49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3C1FB26CB8C600081BF49 /* AppDelegate.swift */; };
 		1EE3C1FE26CB8C600081BF49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3C1FD26CB8C600081BF49 /* SceneDelegate.swift */; };
-		1EE3C20026CB8C600081BF49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3C1FF26CB8C600081BF49 /* ViewController.swift */; };
+		1EE3C20026CB8C600081BF49 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3C1FF26CB8C600081BF49 /* EventsView.swift */; };
 		1EE3C20326CB8C600081BF49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EE3C20126CB8C600081BF49 /* Main.storyboard */; };
 		1EE3C20526CB8C610081BF49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EE3C20426CB8C610081BF49 /* Assets.xcassets */; };
 		1EE3C20826CB8C610081BF49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EE3C20626CB8C610081BF49 /* LaunchScreen.storyboard */; };
@@ -44,10 +53,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E62079226CCFE35000323E1 /* StoryBoardsIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardsIDs.swift; sourceTree = "<group>"; };
+		1E709D8C26CC068A005ED978 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		1E709D9226CC1704005ED978 /* EventsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPresenter.swift; sourceTree = "<group>"; };
+		1E709D9426CC1809005ED978 /* EventsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsProtocols.swift; sourceTree = "<group>"; };
+		1E709D9626CC1991005ED978 /* EventsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsInteractor.swift; sourceTree = "<group>"; };
+		1E709D9A26CC5E06005ED978 /* EventTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTypeView.swift; sourceTree = "<group>"; };
+		1E709D9C26CC61F8005ED978 /* EventTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTypeCell.swift; sourceTree = "<group>"; };
+		1E709D9E26CC62DB005ED978 /* EventTypeCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTypeCellConfigurator.swift; sourceTree = "<group>"; };
+		1E709DA026CC6A9C005ED978 /* EventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRouter.swift; sourceTree = "<group>"; };
 		1EE3C1F826CB8C600081BF49 /* EventsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EE3C1FB26CB8C600081BF49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EE3C1FD26CB8C600081BF49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1EE3C1FF26CB8C600081BF49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1EE3C1FF26CB8C600081BF49 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		1EE3C20226CB8C600081BF49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1EE3C20426CB8C610081BF49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EE3C20726CB8C610081BF49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,6 +112,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E62079126CCFE26000323E1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1E62079226CCFE35000323E1 /* StoryBoardsIDs.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1E709D8E26CC1572005ED978 /* Epics */ = {
+			isa = PBXGroup;
+			children = (
+				1E709D9126CC168F005ED978 /* Home */,
+			);
+			path = Epics;
+			sourceTree = "<group>";
+		};
+		1E709D8F26CC1662005ED978 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1E709D9826CC5625005ED978 /* Events */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1E709D9026CC166C005ED978 /* SubModules */ = {
+			isa = PBXGroup;
+			children = (
+				1E709D9926CC5DED005ED978 /* EventType */,
+			);
+			path = SubModules;
+			sourceTree = "<group>";
+		};
+		1E709D9126CC168F005ED978 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1EE3C20126CB8C600081BF49 /* Main.storyboard */,
+				1E709D8F26CC1662005ED978 /* Modules */,
+				1E709D9026CC166C005ED978 /* SubModules */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1E709D9826CC5625005ED978 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				1EE3C1FF26CB8C600081BF49 /* EventsView.swift */,
+				1E709D9226CC1704005ED978 /* EventsPresenter.swift */,
+				1E709D9626CC1991005ED978 /* EventsInteractor.swift */,
+				1E709DA026CC6A9C005ED978 /* EventsRouter.swift */,
+				1E709D9426CC1809005ED978 /* EventsProtocols.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		1E709D9926CC5DED005ED978 /* EventType */ = {
+			isa = PBXGroup;
+			children = (
+				1E709D9A26CC5E06005ED978 /* EventTypeView.swift */,
+				1E709D9C26CC61F8005ED978 /* EventTypeCell.swift */,
+				1E709D9E26CC62DB005ED978 /* EventTypeCellConfigurator.swift */,
+			);
+			path = EventType;
+			sourceTree = "<group>";
+		};
 		1EE3C1EF26CB8C600081BF49 = {
 			isa = PBXGroup;
 			children = (
@@ -117,13 +199,13 @@
 		1EE3C1FA26CB8C600081BF49 /* EventsApp */ = {
 			isa = PBXGroup;
 			children = (
+				1E62079126CCFE26000323E1 /* Helpers */,
+				1E709D8E26CC1572005ED978 /* Epics */,
 				1EE3C23A26CB97520081BF49 /* Repos */,
 				1EE3C23526CB939A0081BF49 /* Models */,
 				1EE3C22B26CB8D870081BF49 /* Network */,
 				1EE3C1FB26CB8C600081BF49 /* AppDelegate.swift */,
 				1EE3C1FD26CB8C600081BF49 /* SceneDelegate.swift */,
-				1EE3C1FF26CB8C600081BF49 /* ViewController.swift */,
-				1EE3C20126CB8C600081BF49 /* Main.storyboard */,
 				1EE3C20426CB8C610081BF49 /* Assets.xcassets */,
 				1EE3C20626CB8C610081BF49 /* LaunchScreen.storyboard */,
 				1EE3C20926CB8C610081BF49 /* Info.plist */,
@@ -156,6 +238,7 @@
 				1EE3C22C26CB8DB80081BF49 /* ServerManager.swift */,
 				1EE3C22E26CB8DF50081BF49 /* NetworkError.swift */,
 				1EE3C23326CB8FB70081BF49 /* NetworkConstants.swift */,
+				1E709D8C26CC068A005ED978 /* Endpoints.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -317,14 +400,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E709D9526CC1809005ED978 /* EventsProtocols.swift in Sources */,
+				1E709D9726CC1991005ED978 /* EventsInteractor.swift in Sources */,
 				1EE3C23426CB8FB70081BF49 /* NetworkConstants.swift in Sources */,
+				1E62079326CCFE35000323E1 /* StoryBoardsIDs.swift in Sources */,
 				1EE3C23E26CBA5DE0081BF49 /* EventsListResource.swift in Sources */,
+				1E709D8D26CC068A005ED978 /* Endpoints.swift in Sources */,
 				1EE3C23926CB962E0081BF49 /* Event.swift in Sources */,
+				1E709D9D26CC61F8005ED978 /* EventTypeCell.swift in Sources */,
 				1EE3C22D26CB8DB80081BF49 /* ServerManager.swift in Sources */,
 				1EE3C23226CB8E3C0081BF49 /* ResourceManager.swift in Sources */,
 				1EE3C23C26CB977A0081BF49 /* EventsRepo.swift in Sources */,
-				1EE3C20026CB8C600081BF49 /* ViewController.swift in Sources */,
+				1EE3C20026CB8C600081BF49 /* EventsView.swift in Sources */,
 				1EE3C1FC26CB8C600081BF49 /* AppDelegate.swift in Sources */,
+				1E709D9F26CC62DB005ED978 /* EventTypeCellConfigurator.swift in Sources */,
+				1E709D9B26CC5E06005ED978 /* EventTypeView.swift in Sources */,
+				1E709D9326CC1704005ED978 /* EventsPresenter.swift in Sources */,
+				1E709DA126CC6A9C005ED978 /* EventsRouter.swift in Sources */,
 				1EE3C1FE26CB8C600081BF49 /* SceneDelegate.swift in Sources */,
 				1EE3C23726CB95A10081BF49 /* EventType.swift in Sources */,
 				1EE3C24026CBB5730081BF49 /* EventTypeResource.swift in Sources */,

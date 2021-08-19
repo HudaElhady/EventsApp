@@ -7,11 +7,6 @@
 
 import Foundation
 
-struct Endpoint {
-    let path: String
-    let queryItems: [URLQueryItem]
-}
-
 struct NetworkConstants {
     static let baseUrl = "private-7466b-eventtuschanllengeapis.apiary-mock.com"
 }
