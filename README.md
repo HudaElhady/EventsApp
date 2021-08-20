@@ -1,2 +1,2 @@
 # EventsApp
-A simple Event Application
+A simple Event Application with Viper 
