@@ -29,6 +29,12 @@ class EventsView: UIViewController {
 }
 
 extension EventsView: EventsPresenterOutputProtocol {
+    func scrollToIndex(_ indexPath: IndexPath) {
+        eventsCollection.selectItem(at: indexPath, animated: false, scrollPosition:.right)
+        
+//        collectionView(eventsCollection, didSelectItemAt: indexPath)
+    }
+    
     func updateEventsTypesList() {
         eventsCollection.reloadData()
     }

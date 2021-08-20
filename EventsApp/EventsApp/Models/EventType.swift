@@ -11,3 +11,9 @@ struct EventType : Codable {
     let id : String?
     let name : String?
 }
+
+extension EventType: Equatable {
+    static func ==(lhs: EventType, rhs: EventType) -> Bool {
+        return lhs.id == rhs.id && lhs.name == rhs.name
+    }
+}

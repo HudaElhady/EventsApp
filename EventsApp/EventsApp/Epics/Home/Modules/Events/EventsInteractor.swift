@@ -14,7 +14,6 @@ class EventsInteractor {
     init(eventsRepo: EventsRepo = EventsRepoImpl()) {
         self.eventsRepo = eventsRepo
     }
-    
 }
 
 extension EventsInteractor: EventsInteractorProtocol {
@@ -26,12 +25,6 @@ extension EventsInteractor: EventsInteractorProtocol {
             case .failure(let error):
                 self?.presenter?.eventsFailure(error: error)
             }
-        }
-    }
-    
-    func fetchEvents(by typeId: String) {
-        eventsRepo.getEventsList(eventType: typeId, page: "0") { result in
-            print(result)
         }
     }
 }

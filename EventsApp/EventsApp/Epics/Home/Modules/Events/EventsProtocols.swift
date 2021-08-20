@@ -9,25 +9,23 @@ import UIKit
 
 protocol EventsInteractorProtocol {
     var presenter: EventsInteractorOutputProtocol!{get set}
-    func fetchEvents(by typeId: String)
     func fetchEventsTypes()
 }
 
 protocol EventsInteractorOutputProtocol: AnyObject {
     
-    func eventsList(_ list: [Event])
     func eventsTypesList(_ list: [EventType])
     func eventsFailure(error: NetworkError)
 }
 
 protocol EventsPresenterOutputProtocol: UIViewController  {
     func updateEventsTypesList()
+    func scrollToIndex(_ indexPath: IndexPath)
 }
 
 protocol EventsPresenterProtocol {
     var view: EventsPresenterOutputProtocol? {get set}
     var eventsTypesCount: Int {get}
-    func getEvents(by type: String)
     func getEventsTypes()
     func configureEventsCell(_ cell: EventContainerCellProtocol,at index: Int)
 }

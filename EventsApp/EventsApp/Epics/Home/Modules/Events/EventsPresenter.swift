@@ -11,7 +11,6 @@ class EventsPresenter {
     var interactor: EventsInteractorProtocol
     let router: EventsRouterProtocol
     weak var view: EventsPresenterOutputProtocol?
-    private var eventsList = [Event]()
     var eventsTypesCount: Int = 0
     private var eventsTypes = [EventType]()
     
@@ -35,26 +34,24 @@ extension EventsPresenter: EventsPresenterProtocol {
         interactor.fetchEventsTypes()
     }
     
-    func getEvents(by type: String) {
-        interactor.fetchEvents(by: type)
+    func didChangeEventType(_ newType: EventType) {
+        guard let index = eventsTypes.firstIndex(of: newType) else {
+            return
+        }
+        let indexPath = IndexPath(item: index, section: 0)
+        self.view?.scrollToIndex(indexPath)
     }
 }
 
 extension EventsPresenter: EventsInteractorOutputProtocol {
-    func eventsList(_ list: [Event]) {
-        eventsList = list
-    }
-    
     func eventsTypesList(_ list: [EventType]) {
         eventsTypesCount = list.count
         eventsTypes = list
-        router.passEventsTypes(types: list, vc: view!) {[weak self] in self?.getEvents(by: $0.id!)}
+        router.passEventsTypes(types: list, vc: view!, selectTypeHandler: didChangeEventType)
         view?.updateEventsTypesList()
     }
     
     func eventsFailure(error: NetworkError) {
-        
+        router.showAlert(message: error.errorMessage, view: view!)
     }
-    
-    
 }

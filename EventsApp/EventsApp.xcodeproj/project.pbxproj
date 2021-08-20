@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1E437D1C26CFED13004FA902 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E437D1B26CFED13004FA902 /* StringExtension.swift */; };
 		1E437D1E26CFEFB0004FA902 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E437D1D26CFEFB0004FA902 /* ViewControllerExtension.swift */; };
+		1E437D2126CFF501004FA902 /* BaseRepoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E437D2026CFF501004FA902 /* BaseRepoMock.swift */; };
+		1E437D2326CFF56C004FA902 /* EventsRepoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E437D2226CFF56C004FA902 /* EventsRepoMock.swift */; };
+		1E437D2626CFFE6B004FA902 /* EventsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E437D2526CFFE6B004FA902 /* EventsInteractorTests.swift */; };
+		1E437D2926D0034C004FA902 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E437D2826D0034C004FA902 /* JsonHelper.swift */; };
+		1E437D2B26D003A4004FA902 /* eventtypes.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E437D2A26D003A4004FA902 /* eventtypes.json */; };
 		1E62079326CCFE35000323E1 /* StoryBoardsIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62079226CCFE35000323E1 /* StoryBoardsIDs.swift */; };
 		1E709D8D26CC068A005ED978 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E709D8C26CC068A005ED978 /* Endpoints.swift */; };
 		1E709D9326CC1704005ED978 /* EventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E709D9226CC1704005ED978 /* EventsPresenter.swift */; };
@@ -63,6 +68,11 @@
 /* Begin PBXFileReference section */
 		1E437D1B26CFED13004FA902 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		1E437D1D26CFEFB0004FA902 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		1E437D2026CFF501004FA902 /* BaseRepoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepoMock.swift; sourceTree = "<group>"; };
+		1E437D2226CFF56C004FA902 /* EventsRepoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRepoMock.swift; sourceTree = "<group>"; };
+		1E437D2526CFFE6B004FA902 /* EventsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsInteractorTests.swift; sourceTree = "<group>"; };
+		1E437D2826D0034C004FA902 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
+		1E437D2A26D003A4004FA902 /* eventtypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eventtypes.json; sourceTree = "<group>"; };
 		1E62079226CCFE35000323E1 /* StoryBoardsIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardsIDs.swift; sourceTree = "<group>"; };
 		1E709D8C26CC068A005ED978 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		1E709D9226CC1704005ED978 /* EventsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPresenter.swift; sourceTree = "<group>"; };
@@ -135,6 +145,32 @@
 				1E437D1D26CFEFB0004FA902 /* ViewControllerExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1E437D1F26CFF4D6004FA902 /* ReposMock */ = {
+			isa = PBXGroup;
+			children = (
+				1E437D2026CFF501004FA902 /* BaseRepoMock.swift */,
+				1E437D2226CFF56C004FA902 /* EventsRepoMock.swift */,
+			);
+			path = ReposMock;
+			sourceTree = "<group>";
+		};
+		1E437D2426CFF65B004FA902 /* InteractorsTest */ = {
+			isa = PBXGroup;
+			children = (
+				1E437D2526CFFE6B004FA902 /* EventsInteractorTests.swift */,
+			);
+			path = InteractorsTest;
+			sourceTree = "<group>";
+		};
+		1E437D2726D00314004FA902 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1E437D2A26D003A4004FA902 /* eventtypes.json */,
+				1E437D2826D0034C004FA902 /* JsonHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		1E62079126CCFE26000323E1 /* Helpers */ = {
@@ -264,6 +300,9 @@
 		1EE3C21126CB8C620081BF49 /* EventsAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				1E437D2426CFF65B004FA902 /* InteractorsTest */,
+				1E437D1F26CFF4D6004FA902 /* ReposMock */,
+				1E437D2726D00314004FA902 /* Helper */,
 				1EE3C21226CB8C620081BF49 /* EventsAppTests.swift */,
 				1EE3C21426CB8C620081BF49 /* Info.plist */,
 			);
@@ -431,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E437D2B26D003A4004FA902 /* eventtypes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,7 +524,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E437D2326CFF56C004FA902 /* EventsRepoMock.swift in Sources */,
+				1E437D2626CFFE6B004FA902 /* EventsInteractorTests.swift in Sources */,
+				1E437D2126CFF501004FA902 /* BaseRepoMock.swift in Sources */,
 				1EE3C21326CB8C620081BF49 /* EventsAppTests.swift in Sources */,
+				1E437D2926D0034C004FA902 /* JsonHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,7 +626,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -637,7 +681,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -695,7 +739,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B9MRWB6593;
 				INFOPLIST_FILE = EventsAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -717,7 +761,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B9MRWB6593;
 				INFOPLIST_FILE = EventsAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
