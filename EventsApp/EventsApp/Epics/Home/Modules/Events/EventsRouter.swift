@@ -32,7 +32,7 @@ class EventsRouter: EventsRouterProtocol {
     }
     
     func showAlert(message: String, view: UIViewController) {
-//        view.alert(message: message, actions: [("Cancel", .cancel)])
+        view.alert(message: message, actions: [("Cancel", .cancel)])
     }
 
 }

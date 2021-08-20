@@ -12,12 +12,21 @@ class EventTypeView: UIViewController {
     private var didSelectTypeHandler: ((EventType)->Void)?
     private let configurator = EventTypeCellConfigurator()
     private var eventTypesList = [EventType] () {
-        didSet{eventTypesCollection.reloadData()}
+        didSet{
+            eventTypesCollection.reloadData()
+            selectFirstEventType()
+        }
+    }
+    
+    func selectFirstEventType() {
+        let indexPath = IndexPath(item: 0, section: 0)
+        eventTypesCollection.selectItem(at: indexPath, animated: false, scrollPosition:.right)
+        collectionView(eventTypesCollection, didSelectItemAt: indexPath)
     }
     
     func set(eventTypesList: [EventType], didSelectTypeHandler: @escaping ((EventType)->Void)) {
-        self.eventTypesList = eventTypesList
         self.didSelectTypeHandler = didSelectTypeHandler
+        self.eventTypesList = eventTypesList
     }
 
 }

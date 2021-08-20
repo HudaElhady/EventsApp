@@ -21,13 +21,15 @@ protocol EventsInteractorOutputProtocol: AnyObject {
 }
 
 protocol EventsPresenterOutputProtocol: UIViewController  {
-//    func updateEventsTypesList()
+    func updateEventsTypesList()
 }
 
 protocol EventsPresenterProtocol {
     var view: EventsPresenterOutputProtocol? {get set}
+    var eventsTypesCount: Int {get}
     func getEvents(by type: String)
     func getEventsTypes()
+    func configureEventsCell(_ cell: EventContainerCellProtocol,at index: Int)
 }
 
 protocol EventsRouterProtocol {
@@ -35,6 +37,11 @@ protocol EventsRouterProtocol {
     func showAlert(message: String, view: UIViewController)
 //    func pushEventDetails(interactor: EventDetailsInteractorProtocol, vc: UIViewController)
     func passEventsTypes(types: [EventType], vc: UIViewController, selectTypeHandler: @escaping (EventType)->Void)
+}
+
+protocol EventContainerCellProtocol: AnyObject {
+    var presenter: EventsContainerPresenterProtocol!{get set}
+    func getEvents(didSelectEventHandler: @escaping (Event) -> Void)
 }
 
 
