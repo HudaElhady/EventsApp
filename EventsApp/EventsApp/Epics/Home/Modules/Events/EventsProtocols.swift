@@ -33,7 +33,7 @@ protocol EventsPresenterProtocol {
 protocol EventsRouterProtocol {
     var rootViewController: UIViewController { get }
     func showAlert(message: String, view: UIViewController)
-//    func pushEventDetails(interactor: EventDetailsInteractorProtocol, vc: UIViewController)
+    func pushEventDetails(_ eventDetails: EventDetails, vc: UIViewController)
     func passEventsTypes(types: [EventType], vc: UIViewController, selectTypeHandler: @escaping (EventType)->Void)
 }
 

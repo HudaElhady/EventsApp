@@ -34,5 +34,9 @@ class EventsRouter: EventsRouterProtocol {
     func showAlert(message: String, view: UIViewController) {
         view.alert(message: message, actions: [("Cancel", .cancel)])
     }
+    
+    func pushEventDetails(_ eventDetails: EventDetails, vc: UIViewController) {
+        vc.navigationController?.pushViewController(EventDetailsView.make(with: eventDetails), animated: true)
+    }
 
 }

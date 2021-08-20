@@ -9,14 +9,13 @@ import UIKit
 
 class EventsContainerCell: UICollectionViewCell {
     @IBOutlet weak var eventsTableView: UITableView!
+    private var didSelectEventHandler: ((Event)->Void)?
+    static let identifier = "EventsContainerCell"
     var presenter: EventsContainerPresenterProtocol! {
         didSet {
             presenter.view = self
         }
     }
-
-    private var didSelectEventHandler: ((Event)->Void)?
-    static let identifier = "EventsContainerCell"
 }
 
 extension EventsContainerCell: EventsContainerPresenterOutputProtocol {
@@ -24,7 +23,6 @@ extension EventsContainerCell: EventsContainerPresenterOutputProtocol {
         eventsTableView.reloadData()
     }
 }
-
 
 extension EventsContainerCell: EventContainerCellProtocol {
     func getEvents(didSelectEventHandler: @escaping (Event) -> Void) {
@@ -47,21 +45,17 @@ extension EventsContainerCell: UITableViewDataSource {
 
 extension EventsContainerCell: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UIScreen.main.bounds.height / 6
+        return UIScreen.main.bounds.height / 5.5
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        didSelectEventHandler?(eventsList[indexPath.row])
+        didSelectEventHandler?(presenter.getEvent(by: indexPath.row))
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-            guard let presenter = self.presenter else {
-                return
-            }
-            let bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height
-            if bottomEdge >= scrollView.contentSize.height {
-                presenter.loadMoreItems()
-            }
-      
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        if position >= (eventsTableView.contentSize.height - 100 - scrollView.frame.size.height) {
+            presenter.loadMoreItems()
+        }
     }
 }

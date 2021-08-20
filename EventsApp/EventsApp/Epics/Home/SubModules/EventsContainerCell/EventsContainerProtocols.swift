@@ -29,6 +29,7 @@ protocol EventsContainerPresenterProtocol {
     func getEvents()
     func configureEventCell(_ cell: EventCellProtocol,at index: Int)
     func loadMoreItems()
+    func getEvent(by index: Int) -> Event
 }
 
 protocol EventCellProtocol: AnyObject {

@@ -18,6 +18,7 @@ enum StoryBoardsIDs: String {
 enum ViewControllersIDs: String {
     case eventsVC = "EventsView"
     case eventTypeVC = "EventTypeView"
+    case EventDetailsVC = "EventDetailsView"
     
     var id: String {
         return self.rawValue

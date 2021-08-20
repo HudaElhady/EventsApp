@@ -19,15 +19,19 @@ class EventsPresenter {
         self.router = router
         self.interactor.presenter = self
     }
+    
+    func openDetailsScreen(_ event: Event) {
+        let date = (event.startDate ?? "").toDateString(formate: "d, MMM yyyy") ?? ""
+        let details = EventDetails(name: event.name ?? "", startDate: date, eventDescription: event.descriptionField ?? "", longitude: event.latitude ?? "", latitude: event.latitude ?? "", image: event.cover ?? "")
+        self.router.pushEventDetails(details, vc: view!)
+    }
 }
 
 extension EventsPresenter: EventsPresenterProtocol {
     func configureEventsCell(_ cell: EventContainerCellProtocol, at index: Int) {
         let interactor = EventsContainerInteractor()
         cell.presenter = EventsContainerPresenter(interactor: interactor, eventType: eventsTypes[index].id!)
-        cell.getEvents { _ in
-            
-        }
+        cell.getEvents (didSelectEventHandler: openDetailsScreen)
     }
     
     func getEventsTypes() {

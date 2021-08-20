@@ -22,6 +22,7 @@ class EventsContainerPresenter {
 }
 
 extension EventsContainerPresenter: EventsContainerPresenterProtocol {
+
     func configureEventCell(_ cell: EventCellProtocol, at index: Int) {
         let event = eventsList[index]
         let date = (event.startDate ?? "").toDateString(formate: "d, MMM yyyy") ?? ""
@@ -33,6 +34,10 @@ extension EventsContainerPresenter: EventsContainerPresenterProtocol {
     
     func loadMoreItems() {
         interactor.fetchNextPage(by: eventType)
+    }
+    
+    func getEvent(by index: Int) -> Event {
+        return eventsList[index]
     }
 }
 
